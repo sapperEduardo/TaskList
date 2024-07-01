@@ -1,0 +1,6 @@
+persistencia\Categoria.class
+persistencia\Coneccion.class
+logica\Main.class
+persistencia\Categorias.class
+persistencia\Tarea.class
+persistencia\ListaTareas.class
