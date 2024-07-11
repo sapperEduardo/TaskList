@@ -22,7 +22,7 @@ public class Coneccion {
             conn = DriverManager.getConnection(url, user, password);
             estado = true;
             if (conn != null) {
-                System.out.println("Conexión exitosa");
+                
             }
         } catch (SQLException e) {
             System.out.println("Error al conectar a la base de datos: " + e.getMessage());

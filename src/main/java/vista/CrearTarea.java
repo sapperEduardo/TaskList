@@ -1,7 +1,9 @@
 package vista;
 
+import java.awt.Image;
 import java.sql.Date;
 import java.util.Calendar;
+import javax.swing.ImageIcon;
 import logica.Controlador;
 
 public class CrearTarea extends javax.swing.JFrame {
@@ -9,6 +11,9 @@ public class CrearTarea extends javax.swing.JFrame {
     private Controlador control = null;
     
     public CrearTarea() {
+        Image icono = new ImageIcon(getClass().getResource("/icono2.png")).getImage();
+        setIconImage(icono);
+        
         control = new Controlador();
         initComponents();
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
@@ -209,6 +214,7 @@ public class CrearTarea extends javax.swing.JFrame {
                 control.guardarTarea(nombre, descripcion);
             }
             
+            Mensajero.Mensaje("LA TAREA SE AGREGÓ CON EXITO!", "INFO", "Agregar tarea");
             control.abrirPrincipal();
             this.dispose();
             

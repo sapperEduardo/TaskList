@@ -1,9 +1,11 @@
 package vista;
 
+import java.awt.Image;
 import java.sql.Date;
 import java.time.LocalDate;
 import java.time.ZoneId;
 import java.time.format.DateTimeFormatter;
+import javax.swing.ImageIcon;
 import logica.Controlador;
 
 public class EditarTarea extends javax.swing.JFrame {
@@ -12,6 +14,9 @@ public class EditarTarea extends javax.swing.JFrame {
     private Controlador control = null;
     
     public EditarTarea() {
+        Image icono = new ImageIcon(getClass().getResource("/icono2.png")).getImage();
+        setIconImage(icono);
+        
         control = new Controlador();
         initComponents();
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);

@@ -124,7 +124,23 @@ public class ControladorPersistencia {
         } 
     
     }
-
+    
+    public boolean tareaTerminada(int id){
+        boolean estado = false;
+        
+         try {
+            ResultSet resultado =  Coneccion.ejecutarConsulta("select estado from Tareas where idTarea = "+id+";");
+            if (resultado.next()){
+                estado = resultado.getBoolean(1);
+            }
+        }catch (Exception e){
+            System.out.println("Error al obtener el estado de la tarea: "+e.getMessage());
+        }
+         
+        return estado;
+        
+    }
+    
     
 
     

@@ -13,8 +13,14 @@ public class Main {
         
         Principal p = new Principal();
         
+        
         p.setVisible(true);
         p.setLocationRelativeTo(null);
+        
+        
+        
+        
+        
         
         
         

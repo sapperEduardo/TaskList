@@ -52,8 +52,17 @@ public class Controlador {
         control.actualizarTarea(id, nombre, descripcion);
     }
 
-    public void terminarTarea(int id) {
-        control.terminarTarea(id);
+    public boolean terminarTarea(int id) {
+        
+        boolean estado = control.tareaTerminada(id);
+        
+        if(!estado){
+            control.terminarTarea(id);
+            return true;
+        }else{
+            return false;
+        }
+        
     }
 
     

@@ -22,4 +22,13 @@ public class Mensajero {
     }
     
     
+    public static boolean eliminar(){
+        int respuesta = JOptionPane.showConfirmDialog(null, "LA TAREA YA ESTÁ TERMINADA\n¿DESEA ELIMINARLA?", "Eliminar tarea terminada", JOptionPane.YES_NO_OPTION);
+        return (respuesta == JOptionPane.YES_OPTION);
+        
+    }
+    
+    
+    
+    
 }
